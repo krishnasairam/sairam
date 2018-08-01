@@ -1,5 +1,7 @@
 i=int(input("enter integer"))
 sum=0
-for i in range (1,i+1,1):
-    sum=sum+i
+a=1
+while a<=i:
+    sum=sum+a
+    a+=1
 print(sum)    
