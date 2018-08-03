@@ -8,6 +8,6 @@ def main():
     if ans_in**3 != x_in:
         print(str(x_in) +" is not a perfect cube")
     else:
-        print(x_in,"is a perfect cube")
+        print(x_in, "is a perfect cube")
 if __name__ == "__main__":
     main()
