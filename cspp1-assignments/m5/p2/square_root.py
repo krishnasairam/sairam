@@ -1,7 +1,7 @@
 """Write a python program to find the square root of the given number"""
 def main():
     """approximation square root """
-    squ_are = int(input("enter the number"))
+    squ_are = int(input())
     eps_ilon = 0.01
     gue_ss = 0.0
     incr_ement = 0.1
