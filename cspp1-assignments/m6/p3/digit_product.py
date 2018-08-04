@@ -15,11 +15,12 @@ def main():
         print ('0')
     else:         
         while int_input != 0:
-            a_x = int_input % 10
+            a_x = abs(int_input) % 10
             pro_duct = pro_duct * a_x
-            int_input = int_input // 10
+            int_input = abs(int_input) // 10
         if int_input < 0:
-            pro_duct = -pro_duct
-        print(pro_duct)
+            print(-product)
+        else:    
+            print(pro_duct)
 if __name__ == "__main__":
     main()
