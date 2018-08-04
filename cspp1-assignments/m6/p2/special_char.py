@@ -8,11 +8,12 @@ def main():
     Read string from the input, store it in variable str_input.
     '''
     str_input = input()
+    s_t = ''
     for i in str_input:
         if i in '!@#$%^&*':
-            print(" ")
+            s_t += ' '
         else:
-            print(i)
-
+            s_t += i
+    print(s_t)
 if __name__ == "__main__":
     main()
