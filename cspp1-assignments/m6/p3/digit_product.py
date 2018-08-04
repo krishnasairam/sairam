@@ -20,7 +20,7 @@ def main():
             pro_duct = pro_duct * a_x
             int_input = abs(int_input) // 10
         if temp < 0:
-            print(-product)
+            print(-pro_duct)
         else:    
             print(pro_duct)
 if __name__ == "__main__":
