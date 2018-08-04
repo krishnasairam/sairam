@@ -9,6 +9,7 @@ def main():
     Read any number from the input, store it in variable int_input.
     '''
     int_input = int(input())
+    temp = int_input
     pro_duct = 1
     a_x = 1
     if int_input == 0:
@@ -18,7 +19,7 @@ def main():
             a_x = abs(int_input) % 10
             pro_duct = pro_duct * a_x
             int_input = abs(int_input) // 10
-        if int_input < 0:
+        if temp < 0:
             print(-product)
         else:    
             print(pro_duct)
