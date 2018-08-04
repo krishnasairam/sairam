@@ -18,7 +18,7 @@ def main():
             a_x = int_input % 10
             pro_duct = pro_duct * a_x
             int_input = int_input // 10
-        if int_input < 0
+        if int_input < 0:
         pro_duct = -pro_duct        
         print(pro_duct)
 if __name__ == "__main__":
