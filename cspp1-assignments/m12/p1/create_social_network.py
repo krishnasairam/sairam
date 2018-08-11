@@ -33,9 +33,16 @@ def create_social_network(data):
     '''
     a_dict = {}
     for i in data:
-        list_a=i.split("follows")
-        a_dict[list_a[0]] = list_a[1]
-    return a_dict      
+        string_1 = i
+        length = len(string_1)
+        for i in range(length):
+            l=string_1.split("follows")
+            if l[0] not in a_dict:
+                a_dict[l[0]]=[l[1]]
+            elif l[1] not in a_dict[l[0]]:       
+                a_dict[l[0]].append(l[1])
+    return(a_dict) 
+
 def main():
     '''
         handling testcase input and printing output
@@ -48,5 +55,6 @@ def main():
         list_1.append(string)
         #string += '\n'
     print(create_social_network(list_1))
+
 if __name__ == "__main__":
     main()
