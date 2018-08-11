@@ -40,7 +40,7 @@ def create_social_network(data):
                 if list_1[0] not in a_dict:
                     a_dict[list_1[0]] = [k]
                 elif k not in a_dict[list_1[0]]:
-                    a_dict[list_1[0]].append(k)            
+                    a_dict[list_1[0]].append(k)           
     return a_dict
 def main():
     '''
