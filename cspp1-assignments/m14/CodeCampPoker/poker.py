@@ -2,11 +2,12 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands'''
 def is_straight(hand):
+    '''  straight '''
     card_values = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3,
                     '4':4, '5':5, '6':6, '7':7, '8':8, '9':9}
     face_values = []
-    for h in hand:
-            face_values.append(card_values[h[0]])
+    for h_in in hand:
+        face_values.append(card_values[h_in[0]])
     face_values.sort()
     for i in range(0, len(face_values)-1):
         if face_values[i+1]- face_values[i] != 1:
@@ -21,13 +22,11 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    temp = hand[0][1]
-    count = 0
-    for element in hand:
-        if element[1] == temp:
-            count += 1
-        flag = bool(count == len(hand))
-        return flag
+    suit = hand[0]
+    for h_input in hand:
+        if suit[1] != h_input[1]:
+            return False
+    return True
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
