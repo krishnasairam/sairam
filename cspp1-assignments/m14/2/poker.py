@@ -3,7 +3,7 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands'''
 def is_straight(ranks):
     '''  straight '''
-    return len(set(ranks))==5 and (max(ranks)-min(ranks)==4)
+    return len(set(ranks)) == 5 and (max(ranks) -min(ranks) == 4)
 def is_flush(hand):
     suit = hand[0]
     for h_input in hand:
@@ -20,8 +20,7 @@ def kind(ranks,n):
     return 0
 def two_pair(ranks):
     one = kind(ranks,2)
-    ranks.remove(one)
-    two = kind(ranks,2)
+    two = kind(sorted(ranks),2)
     if one and two:
         return (one,two)
     return None    
@@ -42,7 +41,7 @@ def hand_rank(hand):
         return (6,kind(ranks,3),kind(ranks,2))
     if is_flush(hand):
         return(5,ranks)
-    if is_straight(hand):
+    if is_straight(ranks):
         return(4,ranks)   
     if kind(ranks,3):
         return (3,kind(ranks,3),ranks)
