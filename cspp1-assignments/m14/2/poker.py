@@ -77,9 +77,15 @@ def one_pair(hand):
         face_values.append(card_values[h_in[0]])
     face_values.sort()
     face = set(face_values)
+    print(face)
     if len(face) == 4:
-        return True
-    return False
+        face1 = max(face)
+        lis1[face1] = hand
+        lis2 = list(lis1.values())
+        if lis2 == HANDS:
+            hand = lis1[max(lis1.keys())]
+            return True  
+        return False
 lis1={}
 def high_card(hand):
     card_values = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3,'4':4, '5':5, '6':6, '7':7, '8':8, '9':9}
