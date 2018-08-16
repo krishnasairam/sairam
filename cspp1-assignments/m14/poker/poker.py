@@ -80,19 +80,20 @@ def one_pair(hand):
     if len(face) == 4:
         return True
     return False
-lis1=[]    
+lis1={}
 def high_card(hand):
     card_values = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3,'4':4, '5':5, '6':6, '7':7, '8':8, '9':9}
     face_values = []
-    print(hand)
-    hand1 = {}
     for h_in in hand:
         face_values.append(card_values[h_in[0]])
     face = max(face_values)
-    print(face)
-    lis1.append(face)
-    print(lis1)
-       
+    lis1[face]=hand
+    lis2 = list(lis1.values())
+    if lis2 == HANDS:
+        hand = lis1[max(lis1.keys())]
+        return True  
+    return False
+      
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -118,7 +119,7 @@ def hand_rank(hand):
     elif one_pair(hand):
         return 2
     elif high_card(hand):
-    	return 1                  
+        return 1                  
     else:
         return 0
 def poker(hands):
