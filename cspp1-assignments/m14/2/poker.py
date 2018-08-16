@@ -33,7 +33,7 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
-    ranks = card_ranks(hand)
+    ranks = card_rank(hand)
     if is_straight(ranks) and is_flush(hand):
         return (8,ranks)
     if kind(ranks,4):
