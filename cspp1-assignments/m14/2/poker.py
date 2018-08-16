@@ -80,6 +80,20 @@ def one_pair(hand):
     if len(face) == 4:
         return True
     return False
+lis1={}
+def high_card(hand):
+    card_values = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2, '3':3,'4':4, '5':5, '6':6, '7':7, '8':8, '9':9}
+    face_values = []
+    for h_in in hand:
+        face_values.append(card_values[h_in[0]])
+    face = max(face_values)
+    lis1[face]=hand
+    lis2 = list(lis1.values())
+    if lis2 == HANDS:
+        hand = lis1[max(lis1.keys())]
+        return True  
+    return False
+      
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -89,21 +103,23 @@ def hand_rank(hand):
         or a flush or a straight flush.
     '''
     if is_straight(hand) and is_flush(hand):
-        return 8
+        return 9
     elif four_of_a_kind(hand):
-        return 7 
+        return 8 
     elif full_house(hand):
-        return 4       
+        return 7       
     elif is_flush(hand):
         return 6
     elif is_straight(hand):
         return 5
     elif Three_of_akind(hand):
-        return 3
+        return 4
     elif Two_pair(hand):
-        return 2
+        return 3
     elif one_pair(hand):
-        return 1               
+        return 2
+    elif high_card(hand):
+        return 1                  
     else:
         return 0
 def poker(hands):
