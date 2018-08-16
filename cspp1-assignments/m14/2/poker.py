@@ -77,7 +77,6 @@ def one_pair(hand):
         face_values.append(card_values[h_in[0]])
     face_values.sort()
     face = set(face_values)
-    print(face)
     if len(face) == 4:
         face1 = max(face)
         lis1[face1] = hand
