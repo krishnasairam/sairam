@@ -13,7 +13,7 @@ def remove_stopwords(input1,input2):
     d = {}
     wordlist = cleaning(input1) + cleaning(input2)
     for word in wordlist:
-        if word not in load_stopwords(stopwords).keys():
+        if word not in load_stopwords(stopwords):
             d[word] = (cleaning(input1).count(word),cleaning(input2).count(word))
     return d        
 
@@ -28,10 +28,10 @@ def similarity(dict1,dict2):
         num  += (d[i][0] * d[i][1])
         sum1 += d[i][0] ** 2
         sum2 += d[i][1] ** 2
-    den = math.sqrt(sum1) * math.sqrt(sum2)
     return num/den
 def load_stopwords(filename):
     '''
+    den = math.sqrt(sum1) * math.sqrt(sum2)
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
