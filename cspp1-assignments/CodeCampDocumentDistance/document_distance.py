@@ -7,13 +7,13 @@ stopwords = "stopwords.txt"
 def cleaning(input1):
     reg = re.compile('[^a-z]')
     input1 = input1.lower()
-    input1 = [reg.sub(' ',w.strip())for w in input1.split(' ')]
+    input1 = [reg.sub('',w.strip())for w in input1.split(' ')]
     return input1
 def remove_stopwords(input1,input2):
     d = {}
     wordlist = cleaning(input1) + cleaning(input2)
     for word in wordlist:
-        if word not in load_stopwords(stopwords):
+        if word not in load_stopwords(stopwords) and len(word)>0:
             d[word] = (cleaning(input1).count(word),cleaning(input2).count(word))
     return d        
 
