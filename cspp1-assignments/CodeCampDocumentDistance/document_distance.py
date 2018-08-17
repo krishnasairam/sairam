@@ -22,15 +22,15 @@ def similarity(dict1, dict2):
     for word in lis3:
       if word not in load_stopwords(FILE).keys():
         dict3[word] = (lis1.count(word), lis2.count(word))
-    num, sum1, sum2 = 0, 0, 0
+    num, sum1, sum2, den = 0, 0, 0, 0
     for i in dict3:
         num += dict3[i][0] * dict3[i][1]
         sum1 += dict3[i][0] ** 2
         sum2 += dict3[i][1] ** 2
-    den = math.sqrt(sum1) * math.sqrt(sum2)
-    sim = num/den 
+    den = (math.sqrt(sum1) * math.sqrt(sum2))
+    sim = (num/den) 
     return sim
-    
+
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
