@@ -3,34 +3,33 @@
 '''
 import math
 import re
-stopwords = "stopwords.txt"
+STOP_WORDS = "stopwords.txt"
 def cleaning(input1):
+    '''input1'''
     reg = re.compile('[^a-z]')
     input1 = input1.lower()
-    input1 = [reg.sub('',w.strip())for w in input1.split(' ')]
+    input1 = [reg.sub('', w.strip())for w in input1.split(' ')]
     return input1
-def remove_stopwords(input1,input2):
-    d = {}
+def remove_stopwords(input1, input2):
+    '''input1 input2'''
+    d_out = {}
     wordlist = cleaning(input1) + cleaning(input2)
     for word in wordlist:
-        if word not in load_stopwords(stopwords) and len(word)>0:
-            d[word] = (cleaning(input1).count(word),cleaning(input2).count(word))
-    return d        
-
-def similarity(dict1,dict2):
+        if word not in load_stopwords(STOP_WORDS) and len(word) > 0:
+            d_out[word] = (cleaning(input1).count(word), cleaning(input2).count(word))
+    return d_out
+def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    d = {}
-    d = remove_stopwords(dict1,dict2)
-   # print(d)
-    num,sum1,sum2 = 0,0,0  
-    for i in d:
-        num  += (d[i][0] * d[i][1])
-        sum1 += d[i][0] ** 2
-        sum2 += d[i][1] ** 2
-    return num/((math.sqrt(sum1))*(math.sqrt(sum2)))
-
+    d_out = {}
+    d_out = remove_stopwords(dict1, dict2)
+    num, sum1, sum2 = 0, 0, 0
+    for i in d_out:
+        num += (d_out[i][0] * d_out[i][1])
+        sum1 += d_out[i][0] ** 2
+        sum2 += d_out[i][1] ** 2
+    return num/(math.sqrt(sum1))*(math.sqrt(sum2))
 def load_stopwords(filename):
     '''
     den = math.sqrt(sum1) * math.sqrt(sum2)
@@ -47,6 +46,6 @@ def main():
     '''
     input1 = input()
     input2 = input()
-    print(similarity(input1,input2))
+    print(similarity(input1, input2))
 if __name__ == '__main__':
     main()
