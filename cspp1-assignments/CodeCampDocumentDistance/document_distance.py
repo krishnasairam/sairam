@@ -15,7 +15,7 @@ def similarity(dict1, dict2):
         sum1 += dict3[i][0] ** 2
         sum2 += dict3[i][1] ** 2
     den = math.sqrt(sum1) * math.sqrt(sum2)
-    return num/den
+    return (num/den) 
 
 def load_stopwords(filename):
     '''
@@ -34,11 +34,13 @@ def main():
     input2 = input().lower()
     str1 ,str2 = '' , ''
     for i in input1:
-        if i not in '!@#$%^&*()-+=_?:;.,1234567890'and"'":
-            str1 += i
+        if i not in '!@#$%^&*()-+=_?:;.,1234567890':
+            if i not in "'"
+                str1 += i
     for i in input2:
-        if i not in '!@#$%^&*()-+=_?:;.,1234567890'and"'":
-            str2 += i 
+        if i not in '!@#$%^&*()-+=_?:;.,1234567890':
+            if i not in "'"
+                str2 += i 
     lis1 = str1.split(' ')
     lis2 = str2.split(' ')
     print(similarity(lis1, lis2))
