@@ -15,7 +15,7 @@ def remove_stopwords(input1, input2):
     d_out = {}
     wordlist = cleaning(input1) + cleaning(input2)
     for word in wordlist:
-        if word not in load_stopwords(STOP_WORDS) and len(word) > 0:
+        if word not in load_stopwords(STOP_WORDS).keys() and len(word) > 0:
             d_out[word] = (cleaning(input1).count(word), cleaning(input2).count(word))
     return d_out
 def similarity(dict1, dict2):
