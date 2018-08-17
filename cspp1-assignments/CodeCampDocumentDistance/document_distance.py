@@ -9,7 +9,7 @@ def similarity(dict1, dict2):
     for word in lis3:
       if word not in load_stopwords(FILE).keys():
         dict3[word] = (dict1.count(word), dict2.count(word))
-    num, sum1, sum2, den = 0, 0, 0, 0
+    num, sum1, sum2 = 0, 0, 0
     for i in dict3:
         num += dict3[i][0] * dict3[i][1]
         sum1 += dict3[i][0] ** 2
@@ -33,14 +33,16 @@ def main():
     input1 = input().lower()
     input2 = input().lower()
     str1 ,str2 = '' , ''
-    for i in input1:
-        if i not in '!@#$%^&*()-+=_?.,1234567890':
-            if i not in "'":
-                str1 += i
-    for i in input2:
-        if i not in '!@#$%^&*()-+=_?.,1234567890':
-            if i not in "'":
-                str2 += i 
+    for j in input1:
+        for i in j:
+            if i not in '!@#$%^&*()-+=_?.,1234567890':
+                if i not in "'":
+                    str1 += i
+    for j in input2:
+        for i in j:
+            if i not in '!@#$%^&*()-+=_?.,1234567890':
+                if i not in "'":
+                    str2 += i 
     lis1 = str1.split(' ')
     lis2 = str2.split(' ')
     print(similarity(lis1, lis2))
