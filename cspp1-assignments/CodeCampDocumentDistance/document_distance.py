@@ -10,9 +10,12 @@ def similarity(dict1, dict2):
     lis3 = dict1+dict2
     dict3={}
     for word in lis3:
-        if word not in load_stopwords(stopwords).keys():
-            dict3[word] = (dict1.count(word),dict2.count(word))
-    num,sum1,sum2 = 0,0,0  
+        if word not in (load_stopwords(stopwords).keys()):
+        	for i in range(len(word)):
+        	    if word[i] not in '!@#$%^&*()-+=_1234567890':	
+            		dict3[word] = (dict1.count(word),dict2.count(word))
+    num,sum1,sum2 = 0,0,0
+    print(dict3)
     for i in dict3:
         num += dict3[i][0]*dict3[i][1]
         sum1 += dict3[i][0]**2
