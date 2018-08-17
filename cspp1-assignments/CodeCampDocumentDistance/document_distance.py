@@ -33,7 +33,8 @@ def similarity(dict1, dict2):
         sum1 += dict3[i][0]**2
         sum2 += dict3[i][1]**2
     den = math.sqrt(sum1) * math.sqrt(sum2)
-    return num/den
+    similarity = num/den
+    return similarity
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
