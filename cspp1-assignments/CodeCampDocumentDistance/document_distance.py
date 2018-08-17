@@ -23,7 +23,7 @@ def similarity(dict1,dict2):
     '''
     d = {}
     d = remove_stopwords(dict1,dict2)
-    print(d)
+   # print(d)
     num,sum1,sum2 = 0,0,0  
     for i in d:
         num  += (d[i][0] * d[i][1])
