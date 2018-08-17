@@ -8,7 +8,6 @@ def similarity(dict1, dict2):
         Compute the document distance as given in the PDF
     '''
     lis3 = dict1+dict2
-    print(lis3)
     dict3={}
     for word in lis3:
         if word not in load_stopwords(stopwords).keys():
