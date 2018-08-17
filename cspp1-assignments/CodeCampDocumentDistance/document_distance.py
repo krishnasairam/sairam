@@ -34,11 +34,11 @@ def main():
     input2 = input().lower()
     str1 ,str2 = '' , ''
     for i in input1:
-        if i not in '!@#$%^&*()-+=_?:;.,1234567890':
+        if i not in '!@#$%^&*()-+=_?.,1234567890':
             if i not in "'":
                 str1 += i
     for i in input2:
-        if i not in '!@#$%^&*()-+=_?:;.,1234567890':
+        if i not in '!@#$%^&*()-+=_?.,1234567890':
             if i not in "'":
                 str2 += i 
     lis1 = str1.split(' ')
