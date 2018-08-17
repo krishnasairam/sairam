@@ -25,10 +25,10 @@ def similarity(dict1, dict2):
     d_out = {}
     d_out = remove_stopwords(dict1, dict2)
     num, sum1, sum2 = 0, 0, 0
-    for i in d_out:
-        num += (d_out[i][0] * d_out[i][1])
-        sum1 += d_out[i][0] ** 2
-        sum2 += d_out[i][1] ** 2
+    for i in d_out.values():
+        num += i[0] * i[1]
+        sum1 += i[0] ** 2
+        sum2 += i[1] ** 2
     return num/(math.sqrt(sum1))*(math.sqrt(sum2))
 def load_stopwords(filename):
     '''
