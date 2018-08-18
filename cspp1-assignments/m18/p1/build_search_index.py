@@ -71,6 +71,7 @@ def build_search_index(docs):
                 if word_list(k) not in dict_1:
                     dict_1[word_list(k)] = [(c_in, j.count(k))]
                 else:
+                    if (c_in, j.count(k)) not in dict_1[word_list(k)]:
                     dict_1[word_list(k)].append(tuple([c_in, j.count(k)]))
         c_in = c_in+1
     print_search_index(dict_1)
