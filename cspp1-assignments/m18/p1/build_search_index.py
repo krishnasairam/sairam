@@ -74,7 +74,7 @@ def build_search_index(docs):
                     if (c_in, j.count(k)) not in dict_1[word_list(k)]:
                         dict_1[word_list(k)].append(tuple([c_in, j.count(k)]))
         c_in = c_in+1
-    print_search_index(dict_1)
+    return dict_1
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):
@@ -100,7 +100,7 @@ def main():
         i += 1
     # call print to display the search index
     build_search_index(documents)
-    #print_search_index(build_search_index(documents))
+    print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
     main()
