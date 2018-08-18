@@ -44,7 +44,7 @@ def word_list(text):
     for i in text:
         if i not in '!@#$%^&*().,:;"':
             if i not in "'":
-                s_in += i                  
+                s_in += i                
     return s_in
 def build_search_index(docs):
     '''
@@ -73,7 +73,7 @@ def build_search_index(docs):
                 else:
                     if (c_in, j.count(k)) not in dict_1[word_list(k)]:
                         dict_1[word_list(k)].append(tuple([c_in, j.count(k)]))
-        c_in = c_in+1   
+        c_in = c_in+1
     return dict_1
 # helper function to print the search index
 # use this to verify how the search index looks
