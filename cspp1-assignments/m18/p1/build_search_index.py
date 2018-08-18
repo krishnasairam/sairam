@@ -44,7 +44,7 @@ def word_list(text):
     for i in text:
         if i not in '!@#$%^&*().,:;"':
             if i not in "'":
-                s_in += i                
+                s_in += i             
     return s_in
 def build_search_index(docs):
     '''
