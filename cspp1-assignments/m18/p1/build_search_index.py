@@ -40,6 +40,7 @@ def word_list(text):
         return a list of words
     '''
     text = text.lower()
+    text = text.strip()
     s_in = ''
     for i in text:
         if i not in '!@#$%^&*().,:;"':
