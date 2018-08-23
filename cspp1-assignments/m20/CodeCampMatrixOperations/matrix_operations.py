@@ -26,7 +26,7 @@ def add_matrix(m1, m2):
     for i in range(len(m1)):
         if len(m1) == len(m2) and len(m1[i]) == len(m2[i]):
                 result = [[0 for row in range(len(m1))] for col in range(len(m2[0]))]
-                result = [[int(m1[i][j]) + int(m2[i][j])for j in range(len(m1[0]))]for i in range(len(m1))]        
+                result = [[int(m1[i][j]) + int(m2[i][j]) for j in range(len(m1[0]))] for i in range(len(m1))]        
                 return result
     print('Error: Matrix shapes invalid for addition')            
     return None             
@@ -43,7 +43,7 @@ def read_matrix(lis1):
         col = input().split(' ')
         if len(col) == int(lis1[1]):
             matrix.append(col)
-        else:    
+        else:
             print("Error: Invalid input for the matrix")
             return None
     return matrix
@@ -55,7 +55,7 @@ def main():
     lis2 = int_row_col.split(',')
     matrix2 = read_matrix(lis2)
     if matrix1 != None and matrix2 != None:
-        print(add_matrix(matrix1,matrix2))
-        print(mult_matrix(matrix1,matrix2))
+        print(add_matrix(matrix1, matrix2))
+        print(mult_matrix(matrix1, matrix2))
 if __name__ == '__main__':
     main()
