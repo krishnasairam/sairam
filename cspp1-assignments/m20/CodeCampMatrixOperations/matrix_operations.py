@@ -44,7 +44,7 @@ def read_matrix(lis1):
         if len(col) == int(lis1[1]):
             matrix.append(col)
         else:    
-            print('"Error: Invalid input for the matrix"')
+            print("Error: Invalid input for the matrix")
             return None
     return matrix
 def main():
