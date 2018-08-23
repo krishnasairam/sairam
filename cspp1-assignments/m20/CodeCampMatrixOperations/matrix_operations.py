@@ -20,7 +20,7 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    result = m1
+    result = [[0 for row in range(len(m1))] for col in range(len(m2[0]))]
     for i in range(len(m1)):
         for j in range(len(m1[0])):
             result[i][j] = int(m1[i][j]) + int(m2[i][j])
