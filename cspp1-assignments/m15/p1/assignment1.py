@@ -258,7 +258,7 @@ class CiphertextMessage(Message):
                 if is_word(self.valid_words, word):
                     count += 1
             if self.max_count < count:
-                self.max_count = count
+                #self.max_count = count
                 self.decrypted_message = (26-shift, decrypted)
         return self.decrypted_message
 

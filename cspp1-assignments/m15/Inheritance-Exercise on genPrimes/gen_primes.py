@@ -14,6 +14,6 @@ def genPrimes(limit):
 def main():
     p = genPrimes(int(input()))
     prms = [i for i in p]
-    print(tuple(prms)) 
+    print(prms) 
 if __name__== "__main__":
     main()
