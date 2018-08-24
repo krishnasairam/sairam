@@ -10,11 +10,14 @@ def Tic_Tac_Toe(matrix):
             winner.append(matrix[0][0])
     if matrix[2][0] == matrix[1][1] == matrix[0][2]:
         winner.append(matrix[0][2])
+    if len(winner) == 0:
+        print('draw')
+        return None   
     if len(winner) == 1:
         if winner[0] == 'x' or winner[0] == 'o':
             print(winner[0])
         else:    
-            print("invalid game")
+            print("invalid input")
         return winner[0]
     else:
         print("invalid game")
