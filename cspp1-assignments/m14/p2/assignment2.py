@@ -162,8 +162,7 @@ class PlaintextMessage(Message):
         Used to safely access a copy self.encrypting_dict outside of the class
         Returns: a COPY of self.encrypting_dict
         '''
-        #copy_dict = deepcopy(self.encrypting_dict)
-        return self.encrypting_dict 
+        return self.encrypting_dict
     def get_message_text_encrypted(self):
         '''
         Used to safely access self.message_text_encrypted outside of the class
