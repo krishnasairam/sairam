@@ -109,7 +109,7 @@ class Message:
             if i.islower():
                 self.cipher_dict[i] = chr((ord(i)-97 + shift)%26 +97)
             elif i.isupper():
-                self.cipher_dict[i] = chr((ord(i)-65 + shift)%26 +65)       
+                self.cipher_dict[i] = chr((ord(i)-65 + shift)%26 +65)
         return self.cipher_dict
 
     def apply_shift(self, shift):
@@ -127,7 +127,7 @@ class Message:
             if letter in self.build_shift_dict(shift).keys():
                 new_text.append(self.build_shift_dict(shift)[letter])
             else:
-                new_text.append(letter)        
+                new_text.append(letter)
         return ''.join(new_text)
 def main():
     '''
