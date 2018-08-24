@@ -7,10 +7,13 @@ def Tic_Tac_Toe(matrix):
         if matrix[0][i] == matrix[1][i] == matrix[2][i]:
             winner.append(matrix[0][i])
     if matrix[0][0] == matrix[1][1] == matrix[2][2]:
-            winner.append(matrix[0][i])
+            winner.append(matrix[0][0])
     if matrix[2][0] == matrix[1][1] == matrix[0][2]:
         winner.append(matrix[0][2])
     if len(winner) == 1:
+    	if winner[0] == 'xo':
+    		print(winner[0])
+    	print("invalid game")	
         return winner[0]          
     else:
         print("invalid game")
@@ -20,6 +23,6 @@ def main():
     for _ in range(0, 3):
         col = input().split(' ')
         matrix.append(col)
-    print(Tic_Tac_Toe(matrix))
+    Tic_Tac_Toe(matrix)
 if __name__ == '__main__':
     main()
