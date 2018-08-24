@@ -17,7 +17,6 @@
 ### Helper code
 
 import string
-from copy import deepcopy
 
 def load_words(file_name):
     '''
