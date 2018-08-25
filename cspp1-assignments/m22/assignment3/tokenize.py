@@ -8,7 +8,7 @@ def tokenize(list_in):
     for i in range(len(list_in)):
         if list_in[i] not in dict_new:
             dict_new[list_in[i]] = list_in.count(list_in[i])
-    return dict_new        
+    return dict_new
 def main():
     '''input'''
     valid_letters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789 '
@@ -21,6 +21,6 @@ def main():
             if i in valid_letters:
                 string_new += i
     list_in = string_new.split()
-    print(tokenize(list_in))         
+    print(tokenize(list_in))
 if __name__ == '__main__':
     main()
