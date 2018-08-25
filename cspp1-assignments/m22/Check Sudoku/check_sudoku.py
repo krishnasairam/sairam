@@ -63,7 +63,7 @@ def check_sudoku(sudoku):
             count += 1
         if len(set(lis3)) == 9 and int(max(lis3))-int(min(lis3)) == 8:
             count += 1
-    if count == 27:
+    if count == 26:
         return True
     return False                                         
 def main():
