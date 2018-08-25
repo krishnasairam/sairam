@@ -13,25 +13,25 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    winner = []
+    count = 0
     for row in sudoku:
         if len(set(row)) == 9 and int(max(row))-int(min(row)) == 8:
-            winner.append(row[0])
+            count += 1
     for i in range(0, 9):
         lis1 = []
         lis1.append(sudoku[0][i])
         if len(set(lis1)) == 9 and int(max(lis1))-int(min(lis1)) == 8:
-            winner.append(sudoku[0][i])
+            count += 1
     for i in range(0, 9):
         lis1 = []
         lis1.append(sudoku[i][i])
     if len(set(lis1)) == 9 and int(max(lis1))-int(min(lis1)) == 8:
-        winner.append(sudoku[i][i])           
+        count += 1           
     for i in range(0, 9):
         lis1 = []
         lis1.append(sudoku[(9-1)-i][i])
     if len(set(lis1)) == 9 and int(max(lis1))-int(min(lis1)) == 8:
-        winner.append(sudoku[i][i])
+        count += 1
     for _ in range(0,9):
         lis1 =[]
         lis2 =[]
@@ -58,12 +58,12 @@ def check_sudoku(sudoku):
             for j in range(4,9):
                 lis3.append(sudoku[i][j])
         if len(set(lis1)) == 9 and int(max(lis1))-int(min(lis1)) == 8:
-            winner.append(sudoku[i][j])
+            count += 1
         if len(set(lis2)) == 9 and int(max(lis2))-int(min(lis2)) == 8:
-            winner.append(sudoku[i][j])
+            count += 1
         if len(set(lis3)) == 9 and int(max(lis3))-int(min(lis3)) == 8:
-            winner.append(sudoku[i][j])
-    if len(winner) == 27:
+            count += 1
+    if count == 27:
         return True
     return False                                         
 def main():
