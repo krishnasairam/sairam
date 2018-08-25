@@ -2,8 +2,8 @@
 Write a function to clean up a given string by removing the special characters and retain
 alphabets in both upper and lower case and numbers.
 '''
-'''cleaning string'''
 def clean_string(string_in):
+    '''cleaning string'''
     string_new = ''
     valid_letters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789'
     for i in string_in:
