@@ -19,7 +19,7 @@ def check_sudoku(sudoku):
             count += 1
     for i in range(0, 9):
         lis1 = []
-        for j in range(0, n):
+        for j in range(0, 9):
             lis1.append(sudoku[j][i])
         if len(set(lis1)) == 9 and int(max(lis1))-int(min(lis1)) == 8:
             count += 1
@@ -53,9 +53,8 @@ def check_sudoku(sudoku):
         if len(set(lis2)) == 9 and int(max(lis2))-int(min(lis2)) == 8:
             count += 1
         if len(set(lis3)) == 9 and int(max(lis3))-int(min(lis3)) == 8:
-            count += 1
-    print(count)        
-    if count == 27:
+            count += 1        
+    if count == 45:
         return True
     return False                                         
 def main():
