@@ -24,9 +24,9 @@ def check_sudoku(sudoku):
         if len(set(lis1)) == 9 and int(max(lis1))-int(min(lis1)) == 8:
             count += 1
     for _ in range(0, 9):
-        lis1 =[]
-        lis2 =[]
-        lis3 =[]
+        lis1 = []
+        lis2 = []
+        lis3 = []
         for i in range(0, 3):
             for j in range(0, 3):
                 lis1.append(sudoku[i][j])
@@ -62,12 +62,11 @@ def main():
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
     '''
-    
     # initialize empty list
     sudoku = []
 
     # loop to read 9 lines of input from console
-    for i in range(9):
+    for _ in range(9):
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)
