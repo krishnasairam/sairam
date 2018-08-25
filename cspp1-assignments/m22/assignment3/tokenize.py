@@ -14,10 +14,13 @@ def main():
     int_input = int(input())
     for _ in range(int_input):
         string_in = input()
+        string_new += ' '
         for i in string_in:
             if i in valid_letters:
                 string_new += i
+
     list_in = string_new.split()
+    print(list_in)
     print(tokenize(list_in))            
 if __name__ == '__main__':
     main()
