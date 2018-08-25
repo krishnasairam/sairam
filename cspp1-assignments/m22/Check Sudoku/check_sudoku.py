@@ -23,40 +23,40 @@ def check_sudoku(sudoku):
             lis1.append(sudoku[j][i])
         if len(set(lis1)) == 9 and int(max(lis1))-int(min(lis1)) == 8:
             count += 1
-    for _ in range(0,9):
+    for _ in range(0, 9):
         lis1 =[]
         lis2 =[]
-        lis3 =[]   
-        for i in range(0,3):
-            for j in range(0,3):
+        lis3 =[]
+        for i in range(0, 3):
+            for j in range(0, 3):
                 lis1.append(sudoku[i][j])
-            for j in range(3,4):
+            for j in range(3, 4):
                 lis2.append(sudoku[i][j])
-            for j in range(4,9):
+            for j in range(4, 9):
                 lis3.append(sudoku[i][j])
-        for i in range(3,4):
-            for j in range(0,3):
+        for i in range(3, 4):
+            for j in range(0, 3):
                 lis1.append(sudoku[i][j])
-            for j in range(3,4):
+            for j in range(3, 4):
                 lis2.append(sudoku[i][j])
-            for j in range(4,9):
+            for j in range(4, 9):
                 lis3.append(sudoku[i][j])
-        for i in range(4,9):
-            for j in range(0,3):
+        for i in range(4, 9):
+            for j in range(0, 3):
                 lis1.append(sudoku[i][j])
-            for j in range(3,4):
+            for j in range(3, 4):
                 lis2.append(sudoku[i][j])
-            for j in range(4,9):
+            for j in range(4, 9):
                 lis3.append(sudoku[i][j])
         if len(set(lis1)) == 9 and int(max(lis1))-int(min(lis1)) == 8:
             count += 1
         if len(set(lis2)) == 9 and int(max(lis2))-int(min(lis2)) == 8:
             count += 1
         if len(set(lis3)) == 9 and int(max(lis3))-int(min(lis3)) == 8:
-            count += 1        
+            count += 1
     if count == 45:
         return True
-    return False                                         
+    return False
 def main():
     '''
         main function to read input sudoku from console
