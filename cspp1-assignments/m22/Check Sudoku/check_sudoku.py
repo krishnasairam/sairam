@@ -25,12 +25,12 @@ def check_sudoku(sudoku):
     for i in range(0, 9):
         lis1 = []
         lis1.append(sudoku[i][i])
-    if len(set(lis1)) == 1 and int(max(lis1))-int(min(lis1)) == 8:
+    if len(set(lis1)) == 9 and int(max(lis1))-int(min(lis1)) == 8:
         winner.append(sudoku[i][i])           
     for i in range(0, 9):
         lis1 = []
         lis1.append(sudoku[(9-1)-i][i])
-    if len(set(lis1)) == 1 and int(max(lis1))-int(min(lis1)) == 8:
+    if len(set(lis1)) == 9 and int(max(lis1))-int(min(lis1)) == 8:
         winner.append(sudoku[i][i])
     for _ in range(0,9):
         lis1 =[]
@@ -57,11 +57,11 @@ def check_sudoku(sudoku):
                 lis2.append(sudoku[i][j])
             for j in range(4,9):
                 lis3.append(sudoku[i][j])
-        if len(set(lis1)) == 1 and int(max(lis1))-int(min(lis1)) == 8:
+        if len(set(lis1)) == 9 and int(max(lis1))-int(min(lis1)) == 8:
             winner.append(sudoku[i][j])
-        if len(set(lis2)) == 1 and int(max(lis2))-int(min(lis2)) == 8:
+        if len(set(lis2)) == 9 and int(max(lis2))-int(min(lis2)) == 8:
             winner.append(sudoku[i][j])
-        if len(set(lis3)) == 1 and int(max(lis3))-int(min(lis3)) == 8:
+        if len(set(lis3)) == 9 and int(max(lis3))-int(min(lis3)) == 8:
             winner.append(sudoku[i][j])
     if len(winner) == 27:
         return True
