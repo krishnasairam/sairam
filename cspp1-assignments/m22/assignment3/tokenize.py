@@ -9,7 +9,7 @@ def tokenize(list_in):
             dict_new[list_in[i]] = list_in.count(list_in[i])
     return dict_new        
 def main():
-    valid_letters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0 '
+    valid_letters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789 '
     string_new = ''
     int_input = int(input())
     for _ in range(int_input):
