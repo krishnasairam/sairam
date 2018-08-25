@@ -5,9 +5,9 @@ alphabets in both upper and lower case and numbers.
 import string
 def clean_string(string):
     string_new = ''
-    letters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
+    valid_letters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789'
     for i in string:
-        if i in letters:
+        if i in valid_letters:
             string_new += i
     return string_new
 def main():
