@@ -1,16 +1,17 @@
 '''
-Write a function to clean up a given string by removing the special characters and retain 
+Write a function to clean up a given string by removing the special characters and retain
 alphabets in both upper and lower case and numbers.
 '''
-import string
-def clean_string(string):
+'''cleaning string'''
+def clean_string(string_in):
     string_new = ''
     valid_letters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789'
-    for i in string:
+    for i in string_in:
         if i in valid_letters:
             string_new += i
     return string_new
 def main():
+    '''input'''
     string = input()
     print(clean_string(string))
 
