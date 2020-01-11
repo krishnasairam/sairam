@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1072395185123",
+    "firebase_url": "https://switch-board-38d16.firebaseio.com",
+    "project_id": "switch-board-38d16",
+    "storage_bucket": "switch-board-38d16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072395185123:android:b1ee66a844c5dd816a4ed6",
+        "android_client_info": {
+          "package_name": "com.sairam.flutter_twilio_voice_example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072395185123-j1vu37an6uoulcl73msdn8n69cgca57m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sairam.flutter_twilio_voice_example",
+            "certificate_hash": "477dde9413b457b53c8b65d411bdae52a22b1064"
+          }
+        },
+        {
+          "client_id": "1072395185123-9q7u5tba6d5nl1tahm6811cde6m4fnhb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9urTf4sL8FeoSwsm7IuYFy04r_K1w7cs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1072395185123-9q7u5tba6d5nl1tahm6811cde6m4fnhb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
